@@ -771,6 +771,7 @@ GameObject:
   - component: {fileID: 6323685143786198281}
   - component: {fileID: 6323685143786198280}
   - component: {fileID: 6428521239970500080}
+  - component: {fileID: 4030389460793841504}
   m_Layer: 0
   m_Name: player
   m_TagString: Untagged
@@ -837,7 +838,7 @@ CharacterController:
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 4, z: 0}
+  m_Center: {x: 0.5, y: 4, z: 0}
 --- !u!64 &6323685143786198281
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -847,7 +848,7 @@ MeshCollider:
   m_GameObject: {fileID: 6323685143786198277}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
@@ -866,7 +867,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_SynchronizePosition: 1
   m_SynchronizeRotation: 1
-  m_SynchronizeScale: 0
+  m_SynchronizeScale: 1
 --- !u!114 &6428521239970500080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -883,13 +884,37 @@ MonoBehaviour:
   Group: 0
   prefixField: -1
   observableSearch: 2
-  Synchronization: 3
+  Synchronization: 1
   OwnershipTransfer: 0
   ObservedComponents:
   - {fileID: 6323685143786198280}
   viewIdField: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!114 &4030389460793841504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6323685143786198277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d06466c03d263624786afa88b52928b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  statsWindowOn: 1
+  statsOn: 1
+  healthStatsVisible: 0
+  trafficStatsOn: 0
+  buttonsOn: 0
+  statsRect:
+    serializedVersion: 2
+    x: 0
+    y: 100
+    width: 200
+    height: 50
+  WindowId: 100
 --- !u!1 &6323685144222774254
 GameObject:
   m_ObjectHideFlags: 0

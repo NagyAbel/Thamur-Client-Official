@@ -100,10 +100,9 @@ public class online : MonoBehaviourPunCallbacks
     {
         if (PhotonNetwork.CurrentRoom.PlayerCount == 1)
         { 
-           if (currRoom == 1)
-           {
+           
               PhotonNetwork.LoadLevel(2);
-           }
+           
         }
     }
 }
