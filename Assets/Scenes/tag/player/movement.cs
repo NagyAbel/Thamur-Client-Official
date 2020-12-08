@@ -1,8 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class movement : MonoBehaviour
+using Photon.Pun;
+public class movement : MonoBehaviourPunCallbacks
 {
     public Transform groundCheck;
     public float groundDistance = 0.4f;
@@ -22,11 +22,18 @@ public class movement : MonoBehaviour
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+
+            if (photonView.IsMine)
+            {   
+                normalCam.SetActive(true);
+                cameraParent.SetActive(true);
+            }
+
     }
     void Update()
     {    
 
-
+        if (!photonView.IsMine) return;
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
         float horizontal  = Input.GetAxisRaw("Horizontal");
         float vertical =  Input.GetAxisRaw("Vertical");

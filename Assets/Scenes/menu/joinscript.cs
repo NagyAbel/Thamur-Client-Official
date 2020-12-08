@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
-public class joinscript : MonoBehaviour
+using Photon.Pun;
+using Photon.Realtime;
+public class joinscript : MonoBehaviourPunCallbacks
 {
     // Start is called before the first frame update
     void Start()
@@ -16,6 +17,17 @@ public class joinscript : MonoBehaviour
     {
         
     }
+
+
+    public override void OnRoomListUpdate(List<RoomInfo> roomList)
+   {
+        foreach (RoomInfo room in roomList)
+        {
+            Debug.Log(room);
+        }
+
+        
+   }
 
 
     public void home()

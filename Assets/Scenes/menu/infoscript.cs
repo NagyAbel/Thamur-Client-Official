@@ -25,6 +25,14 @@ public class infoscript : MonoBehaviour
     {
         
     }
+    public void join()
+    {
+      SceneManager.LoadScene(4);
+    }
+    public void create()
+    {
+      SceneManager.LoadScene(3);
+    }
 
    public  void log()
     {
