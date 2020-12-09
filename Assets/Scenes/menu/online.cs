@@ -7,7 +7,8 @@ public class online : MonoBehaviourPunCallbacks
    
     public int currRoom;
     public void Awake()
-    {        
+    {   
+        PhotonNetwork.NickName = PlayerPrefs.GetString("username");     
         Connect();
         PhotonNetwork.AutomaticallySyncScene = true;
     }

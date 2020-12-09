@@ -21,7 +21,7 @@ public class movement : MonoBehaviourPunCallbacks
     Vector3 velocity;
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.lockState = CursorLockMode.Locked;
 
             if (photonView.IsMine)
             {   

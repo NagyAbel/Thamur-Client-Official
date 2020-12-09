@@ -5,8 +5,8 @@ using TMPro;
 using UnityEngine.SceneManagement;
 using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
-
-public class login : MonoBehaviour
+using Photon.Pun;
+public class login : MonoBehaviourPunCallbacks
 {
     public TMP_InputField username;
     public TMP_InputField password;
@@ -57,6 +57,7 @@ public class login : MonoBehaviour
 
                 PlayerPrefs.SetInt("isLogged",1);
                 PlayerPrefs.SetString("username",username.text);
+                PhotonNetwork.NickName = username.text;
                 SceneManager.LoadScene(1);
             }
         
