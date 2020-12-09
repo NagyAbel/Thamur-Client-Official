@@ -769,9 +769,9 @@ GameObject:
   - component: {fileID: 6323685143786198278}
   - component: {fileID: 6323685143786198279}
   - component: {fileID: 6323685143786198281}
-  - component: {fileID: 6323685143786198280}
   - component: {fileID: 6428521239970500080}
-  - component: {fileID: 4030389460793841504}
+  - component: {fileID: -4998553924546732203}
+  - component: {fileID: -4294985102236994641}
   m_Layer: 0
   m_Name: player
   m_TagString: Untagged
@@ -853,21 +853,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -2432090755550338912, guid: 55fe9d401b85a4341a43b20742a6a590, type: 3}
---- !u!114 &6323685143786198280
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6323685143786198277}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizePosition: 1
-  m_SynchronizeRotation: 1
-  m_SynchronizeScale: 1
 --- !u!114 &6428521239970500080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -887,11 +872,27 @@ MonoBehaviour:
   Synchronization: 1
   OwnershipTransfer: 0
   ObservedComponents:
-  - {fileID: 6323685143786198280}
+  - {fileID: -4294985102236994641}
   viewIdField: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
---- !u!114 &4030389460793841504
+--- !u!54 &-4998553924546732203
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6323685143786198277}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &-4294985102236994641
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -900,21 +901,30 @@ MonoBehaviour:
   m_GameObject: {fileID: 6323685143786198277}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d06466c03d263624786afa88b52928b6, type: 3}
+  m_Script: {fileID: 11500000, guid: 8efc6b1d64977384eb3405357896c656, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  statsWindowOn: 1
-  statsOn: 1
-  healthStatsVisible: 0
-  trafficStatsOn: 0
-  buttonsOn: 0
-  statsRect:
-    serializedVersion: 2
-    x: 0
-    y: 100
-    width: 200
-    height: 50
-  WindowId: 100
+  m_PositionModel:
+    SynchronizeEnabled: 1
+    TeleportEnabled: 1
+    TeleportIfDistanceGreaterThan: 3
+    InterpolateOption: 2
+    InterpolateMoveTowardsSpeed: 1
+    InterpolateLerpSpeed: 1
+    ExtrapolateOption: 0
+    ExtrapolateSpeed: 1
+    ExtrapolateIncludingRoundTripTime: 1
+    ExtrapolateNumberOfStoredPositions: 1
+  m_RotationModel:
+    SynchronizeEnabled: 1
+    InterpolateOption: 2
+    InterpolateRotateTowardsSpeed: 180
+    InterpolateLerpSpeed: 5
+  m_ScaleModel:
+    SynchronizeEnabled: 0
+    InterpolateOption: 0
+    InterpolateMoveTowardsSpeed: 1
+    InterpolateLerpSpeed: 0
 --- !u!1 &6323685144222774254
 GameObject:
   m_ObjectHideFlags: 0
